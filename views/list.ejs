@@ -1,0 +1,23 @@
+<%- include("header.ejs") %> 
+    <h1><%= listTitle %> </h1>
+    <div class="list">
+    <form action="/remove" method="post">
+        <div class="item">
+            <p class="content"><%= newListItems[0].content %></p>
+        </div>
+        <% for(var i=1;i<newListItems.length;i++) { %>
+            <div class="item">
+                <input type="checkbox" name='checkbox' value="<%= newListItems[i]._id %>" autocomplete="off" onchange="this.form.submit()">
+                <p class="content"><%= newListItems[i].content %></p>
+            </div>
+            <hr>
+            <% } %>
+            <input type="hidden" name="listTitle" value="<%=listTitle %>">
+        <button type="submit" style="display: none;"></button>
+    </form>
+    <form action="/" method="post">
+        <button type="submit" id="add" name="submit" value="<%= listTitle %>">+</button>
+        <input type="text" name="newitem" autocomplete="off">
+    </form>
+    </div>
+<%- include("footer.ejs") %> 

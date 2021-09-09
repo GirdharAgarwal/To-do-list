@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Style+Script&display=swap');
+body{
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(65deg,#0CECDD 45%,#FFDEDE 60%);
+    background-attachment: fixed;
+}
+.item{
+    padding: 2px 5px;
+    display: flex;
+    flex-direction: row;
+    background-color: inherit;
+    border: 0;
+}
+hr{
+    width: 50%;
+}
+hr:last-of-type{
+    display: none;
+}
+input[type="checkbox"]
+{
+    height: 50px;
+    margin:0 10px 0 10px;
+    zoom: 1.4;
+}
+input[type="checkbox"]:checked+p{
+    text-decoration: line-through;
+}
+.content{
+    font-size: 1.3rem;
+    display: inline-block;
+    width: 90%;
+    word-wrap: break-word;
+    height: fit-content;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.5;
+}
+h1{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Style Script', cursive;
+    text-decoration: underline;
+}
+input[type="text"]{
+    width: 75%;
+    margin: 10px 3px;
+    padding: 8px;
+    font-size: 1.3rem;
+    border: 0;
+    border-bottom: 2px solid black;
+    background-color: inherit;
+    border-radius: 0;
+}
+input[type="text"]:focus{
+    background-color:inherit;
+    outline: none;
+}
+#add{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    color: white;
+    margin: 10px;
+    margin-right: 3px;
+    font-size: 2rem;
+    background-color: black;
+    cursor: pointer;
+}
+.list{
+    width: 30%;
+    border: 2px solid grey;
+    border-radius: 10px;
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(65deg,#FDEFEF 45%,#FFDEDE 60%);
+    margin: auto;
+}
+.search{
+    width: 30%;
+    margin: auto;
+}
+.search button{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+@media only screen and (max-width: 600px) {
+    .list{
+        width: 100%;
+    }
+    .search{
+        width: 100%;
+    }
+  }
+@media only screen and (min-width: 600px) and (max-width:900px){
+    .list{
+        width: 75%;
+    }
+    .search{
+        width: 75%;
+    }
+  }
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+    .list{
+        width: 50%;
+    }
+    .search{
+        width: 50%;
+    }
+  }
